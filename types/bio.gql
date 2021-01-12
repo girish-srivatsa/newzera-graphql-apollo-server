@@ -1,0 +1,16 @@
+type Bio {
+  name: String!
+  description: String!
+  url: String!
+  profileUrl: String
+}
+type Query {
+  getUserDetails(name: String!): Bio
+}
+type Mutation {
+  addProfilePicture(name: String!, profileUrl: String!): Bio
+}
+schema {
+  query: Query
+  mutation: Mutation
+}
